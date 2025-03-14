@@ -1,0 +1,263 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif, Montserrat;
+    /* margin: 0;
+    padding: 0; */
+    background: black;
+    text-align: center;
+}
+
+.page-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    /* border: 10px solid red; */
+}
+
+/* this is where the nav is */
+header {
+    /* position: fixed; */
+    background: #222;
+    color: white;
+    padding: 20px 0;
+    width: 100%;
+    border: 2px solid red;
+    z-index: 1000px;
+    margin: 0;
+}
+
+/* contains nav links in logo */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: auto;
+    /* width: 100%; */
+}
+
+/* Css for Logo  */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* css for nav links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+}
+
+/* css for individual nav links */
+.nav-links li {
+    display: inline;
+}
+
+/* css for anchor tag */
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+/* css for button contained in nav */
+
+#btn{
+    background: #54f46e;
+    padding: 10px 40px;
+    border: none;
+    border-radius: 5px;
+}
+
+/* css for anchor tag in button */
+
+.btn {
+    color: #222;
+    font-size: 15px;
+    font-weight: 900;
+    text-decoration: none;
+}
+
+
+/* css for hero section */
+.hero {
+    width: 100%;
+    background: black;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 600px;
+    border: 2px solid red;
+}
+
+/* css for the first div container in hero section */
+
+.hero-content1{
+    display: flex;
+    flex-direction: column;
+    
+    color: #fff;
+    border-radius: 3px;
+    margin: 5px;
+    border: 2px solid yellow;
+   
+    width: 400px;
+    height: 400px;
+}
+
+
+/* css for the second div container in hero section */
+
+.hero-content2{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    width: 400px;
+    height: 400px;
+    margin: 5px;
+   border: 2px solid red;
+}
+
+/* css for H1 in first div in hero section */
+.hero-content1 h1 {
+    font-size: 36px;
+   
+}
+
+
+
+/* css for paragraph in first div in hero section */
+.hero-content1 p {
+    font-size: 18px;
+    color: #fff;
+}
+
+/* css for span tag */
+.bold-white{
+    font-weight: 900;
+}
+
+/* css for first div button in hero section */
+
+.hero-btn{
+    margin: 20px;
+}
+
+
+
+/* css for second div video in hero section */
+.hero-content2 video{
+    width: 400px;
+    
+    top:25px;
+    right: 77.5px;
+    height: 380px;
+    border-radius: 15px;
+}
+
+
+/* css for features in section */
+
+ .features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+   
+    padding: 50px 20px;
+    background: black;
+    border: 2px solid #54f46e;
+    height: 250px;
+    margin: 20px;
+} 
+
+/* css for feature div */
+ .feature {
+    color: #fff;
+    padding: 20px;
+    width: 600px;
+    max-width: 300px;
+} 
+
+
+.div4{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 0px;
+}
+
+/* css for stats  */
+
+.stats{
+    display: flex;
+    gap: 100px;
+    margin: 50px;
+    position: relative;
+    left: 200px;
+    color: #fff;
+}
+
+footer {
+    background: #222;
+    color: white;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+
+
+
+
+
+/* 
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+} */
+
+
+
+@media (max-width: 800px) {
+    .page-wrapper {
+      flex: 50%;
+      max-width: 50%;
+   
+    }
+
+    .hero{
+        height: 400px;
+        flex: 100%;
+        flex-direction: column;
+        flex-wrap: wrap;
+        border: 10px solid red;
+    }
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media (max-width: 600px) {
+    .hero {
+      flex: 100%;
+      max-width: 100%;
+      flex-direction: column;
+    }
+  }

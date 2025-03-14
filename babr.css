@@ -1,0 +1,229 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1fr);
+    /* gap: 8px; */
+    background: #222;
+}
+
+/* css for the first div housing the header */
+.div1 {
+    grid-column: span 5 / span 5;
+    /* border: 2px solid green; */
+    height: 120px;
+    background: black;
+
+}
+
+.trimly-png {
+    width: 170px;
+    font-size: 24px;
+    font-weight: bold;
+    /* border: 2px solid red; */
+    margin: 1px auto;
+}
+
+.nav,
+ul,
+li {
+    display: inline;
+    margin: 50px;
+    list-style-type: none;
+}
+
+.nav,
+ul,
+li,
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+
+
+/* css for button contained in nav */
+
+#btn1 {
+    background: linear-gradient(to bottom, #00FF95, #00D4FF);
+    padding: 10px 40px;
+    border: none;
+    border-radius: 5px;
+
+}
+
+/* css for anchor tag in button */
+
+.btn {
+    color: #222;
+    font-size: 15px;
+    font-weight: 900;
+    text-decoration: none;
+}
+
+
+
+/* css for the second div housing the button and paragraphs */
+
+
+.div2 {
+    grid-column: span 3 / span 3;
+    grid-row: span 3 / span 3;
+    grid-row-start: 2;
+    /* border: 5px solid blue; */
+    margin-top: 1px;
+
+}
+
+.content1 {
+    justify-content: center;
+    max-width: 60%;
+    margin: 0px;
+    padding: 20px;
+}
+
+.content1>h1 {
+    margin-top: 20px;
+    font-size: 40px;
+    line-height: 1;
+    color: white;
+    text-align: start;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* css for the paragaraph inside content */
+.content1>p {
+    margin-top: 30px;
+    padding: 10px;
+    /* font-size: 20px; */
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+/* css for the last paragaraph inside content1 */
+.content1>#grow {
+    font-weight: 900;
+    font-size: 20px;
+}
+
+/* css for the span tag laced in the paragraph  */
+
+.bold-white {
+    font-weight: 900;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* css for button in the second div */
+#btn2 {
+    background: linear-gradient(to bottom, #00FF95, #00D4FF);
+    padding: 10px 40px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 70px;
+}
+
+
+.div3 {
+    grid-column: span 2 / span 2;
+    grid-row: span 3 / span 3;
+    grid-column-start: 4;
+    grid-row-start: 2;
+    /* padding: 50px; */
+
+}
+
+.video {
+    width: 100%;
+    background: #222;
+    padding: 0;
+    border-radius: 15px;
+    /* margin: 50%; */
+    border: 2px solid red;
+}
+
+.div4 {
+    grid-column: span 5 / span 5;
+    grid-row-start: 5;
+    border: 2px solid green;
+}
+
+/* css for features in section */
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* gap: 30px; */
+    padding: 50px 20px;
+    background: black;
+    border: 2px solid #54f46e;
+    height: 250px;
+    margin: 20px;
+}
+
+/* css for feature div */
+.feature {
+    color: #fff;
+    padding: 20px;
+    /* border-radius: 8px; */
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+    width: 600px;
+    max-width: 300px;
+}
+
+
+.div5>.stats {
+    display: flex;
+    gap: 100px;
+    margin: 50px;
+    position: relative;
+    left: 20px;
+    color: #fff;
+}
+
+
+div>.num>h1 {
+    color: linear-gradient(to bottom, #00FF95, #00D4FF);
+    font: 44px 'Montserrat', sans-serif;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+}
