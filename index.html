@@ -1,97 +1,639 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TRIMLY</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
+    />
+    <link rel="stylesheet" href="trimly.css" />
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GetBarbr - Clean HTML/CSS Clone</title>
-    <link rel="stylesheet" href="styles.css">
-
-</head>
-
-<body>
-    <div class="page-wrapper">
-        <header>
-            <nav>
-                <div class="logo">
-                    <img src="./images/barber-logo.svg" alt="Barbr Logo">
-                </div>
-                <ul class="nav-links">
-                    <li><a href="#About">About</a></li>
-                    <li><a href="#features">Features</a></li>
-                    <li><a href="#pricing">Pricing</a></li>
-                    <li><a href="#contact">FAQ</a></li>
-                </ul>
-                <button id="btn"><a href="#signup" class="btn">Try Barbr for free</a></button>
-            </nav>
-        </header>
-
-        <section class="hero">
-            <div class="hero-content1">
-
-                <div>BUILT FOR BARBERS</div>
-
-                <h1>Simplify bookings, attract new clients and boost your income</h1>
-
-                <p>We'll take care of your
-                    <span class="bold-white">schedule</span>,
-                    build your <span class="bold-white">reputation</span> and help
-                    you
-                    <span class="bold-white">grow</span>
-                    so you can spend more time doing what you
-                    <span class="bold-white">love</span>.
-                </p>
-
-                <p>Say goodbye to time-consuming admin, struggling to find clients and expensive booking systems.</p>
-                <p>Grow your business. Simplify bookings. Save 2h/day. Only £20/mo.</p>
-                <button id="btn" class="hero-btn"><a href="#signup" class="btn">Get Started</a></button>
+  <body>
+    <header id="navbar">
+      <nav class="navbar">
+        <div class="logo">
+          <img src="./images/TRIMLY OUT transp.png" alt="TRIMLY" />
+        </div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#faqs">FAQS</a></li>
+          <li><a href="#login" class="btn">Try Trimly for free</a></li>
+        </ul>
+        <div class="mobile-menu">
+          <div class="mobile-menu-btn">
+            <div class="hamburger">
+              <span></span>
+              <span></span>
+              <span></span>
             </div>
-            <div class="hero-content2">
-                <!-- <img src="./images/video-border.png" class="video-border" alt=""> -->
-                <video src="./videos/trimly.mp4" class="video" controls loop autoplay>
-                    <source src="./videos/trimly.mp4" type="video/mp4">
-                </video>
-            </div>
-        </section>
+          </div>
 
-        <section id="features" class="features">
-            <div class="feature">
-                <p>Everything you need to succed as a barber</h1>
-                <p>Build your <span class="bold-white">brand</span>, earn <span class="bold-white">reputation</span>,
-                    become more <span class="bold-white">productive</span>
-                    and <span class="bold-white">grow</span> your client base. Level up your barber game today.</p>
-            </div>
-            <div class="feature">
-                <img src="./images/sign.svg" alt="">
-            </div>
-            <div class="feature">
-                <h2>Trusted by 250+ barbers across 7 countries</h2>
-            </div>
-        </section>
-
-        <div class="stats">
-            <div>
-                <div>250+</div>
-                <div>Barbers</div>
-            </div>
-            <div>
-                <div>£1M+</div>
-                <div>Processed</div>
-            </div>
-            <div>
-                <div>50,000+</div>
-                <div>Bookings</div>
-            </div>
-            <div>
-                <div>22,000+</div>
-                <div>Clients</div>
-            </div>
+          <!-- Mobile Navigation Menu -->
+          <ul class="nav-links mobile-nav">
+            <li><a href="#about">About</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#faqs">FAQS</a></li>
+            <li><a href="#login" class="btn">Try Trimly for free</a></li>
+          </ul>
         </div>
 
-        <footer>
-            <p>&copy; 2025 GetBarbr. All rights reserved.</p>
-        </footer>
-    </div>
-</body>
+        <!-- Overlay -->
+        <div class="overlay"></div>
+      </nav>
 
+      <!-- <div class="ham-menu">
+            <span>....</span>
+            <span>....</span>
+            <span>....</span>
+        </div> -->
+    </header>
+    <div class="hero">
+      <div class="hero-content">
+        <p class="subheading">BUILT FOR BARBERS</p>
+        <h2>Simplify bookings, attract new clients and boost your income</h2>
+        <p>
+          We’ll take care of your <strong>schedule</strong>, build your
+          <strong>reputation</strong> and help you <strong>grow</strong> so you
+          can spend more time doing what you <strong>love</strong>.
+        </p>
+        <p>
+          Say goodbye to time-consuming admin, struggling to find clients and
+          expensive booking systems.
+        </p>
+        <p>
+          <strong
+            >Grow your business. Simplify bookings.<br />Save 2h/day. Only
+            £20/mo.</strong
+          >
+        </p>
+        <a href="#" class="cta-button">Try Trimly for free</a>
+        <p class="trial-info">30-day free trial. Cancel anytime</p>
+      </div>
+      <div class="hero-image">
+        <video
+          id="a65ee68a-decb-2a7c-63b8-1d77c06262b1-video"
+          autoplay=""
+          loop=""
+          style="
+            background-image: url('https://cdn.prod.website-files.com/5ef76950188c031749a0e6dc/64b88fea775baaccaced2dc0_355374c6-2bd0-4fee-9a85-5b97a2303106 (online-video-cuttercom) (1)-poster-00001.jpg');
+          "
+          muted=""
+          playsinline=""
+          data-wf-ignore="true"
+          data-object-fit="cover"
+        >
+          <source
+            src="https://cdn.prod.website-files.com/5ef76950188c031749a0e6dc/64b88fea775baaccaced2dc0_355374c6-2bd0-4fee-9a85-5b97a2303106 (online-video-cuttercom) (1)-transcode.mp4"
+            data-wf-ignore="true"
+          />
+          <source
+            src="https://cdn.prod.website-files.com/5ef76950188c031749a0e6dc/64b88fea775baaccaced2dc0_355374c6-2bd0-4fee-9a85-5b97a2303106 (online-video-cuttercom) (1)-transcode.webm"
+            data-wf-ignore="true"
+          />
+        </video>
+      </div>
+    </div>
+    <div class="stats-section">
+      <div class="stats-container">
+        <div class="stats-box">
+          <h2>
+            <span class="highlight">Everything you need</span> To succeed as a
+            barber
+          </h2>
+          <div class="box-text">
+            <p>
+              Build your <strong>brand</strong>, earn
+              <strong>reputation</strong>, become more
+              <strong>productive</strong> and <strong>grow</strong> your client
+              base. Level up your barber game today.
+            </p>
+          </div>
+        </div>
+        <img src="./images/sign.svg" alt="Signature" class="signature-img" />
+
+        <div class="stats-box trusted-box">
+          <h2>
+            Trusted by
+            <span class="highlight"
+              >250+ <br />
+              barbers
+            </span>
+            across <span class="highlight">7 countries</span>
+          </h2>
+        </div>
+      </div>
+      <div class="stats-numbers">
+        <div class="number-box">
+          <h3>250+</h3>
+          <div class="stats-line"></div>
+          <p>Barbers</p>
+        </div>
+        <div class="number-box">
+          <h3>£1M+</h3>
+          <div class="stats-line"></div>
+          <p>Processed</p>
+        </div>
+        <div class="number-box">
+          <h3>50,000+</h3>
+          <div class="stats-line"></div>
+          <p>Bookings</p>
+        </div>
+        <div class="number-box">
+          <h3>22,000+</h3>
+          <div class="stats-line"></div>
+          <p>Clients</p>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-container">
+      <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+      <div class="carousel hidden-scrollbar" id="carousel">
+        <div class="testimonial-card">
+          <iframe
+            src="https://www.youtube.com/embed/video1"
+            allowfullscreen
+          ></iframe>
+          <p class="testimonial-text">
+            "If I tried to scale up without Barbr, it would have taken me at
+            least 5 years. <strong>I can’t imagine working without it.</strong>"
+          </p>
+          <p class="testimonial-author">DAYTRIMS</p>
+          <p class="testimonial-role">Private Studio Barber</p>
+        </div>
+        <div class="testimonial-card">
+          <iframe
+            src="https://www.youtube.com/embed/video2"
+            allowfullscreen
+          ></iframe>
+          <p class="testimonial-text">
+            "When I added bookings, I saw faces I never saw before. Makes life a
+            lot easier."
+          </p>
+          <p class="testimonial-author">ACE</p>
+          <p class="testimonial-role">Owner of Ace Grooming Room</p>
+        </div>
+        <div class="testimonial-card">
+          <iframe
+            src="https://www.youtube.com/embed/video3"
+            allowfullscreen
+          ></iframe>
+          <p class="testimonial-text">
+            "I hate admin. I got 2 hours of my life back a day thanks to Barbr.
+            I’m a customer for life."
+          </p>
+          <p class="testimonial-author">BluFadez</p>
+          <p class="testimonial-role">Owner of Blufadez Barbershop</p>
+        </div>
+      </div>
+      <button class="next" onclick="moveSlide(1)">&#10095;</button>
+      <button class="prev" onclick="moveSlide(-1)">&#10095;</button>
+    </div>
+
+    <section class="hero2">
+      <h2 class="heading2">You have two options...</h2>
+      <div class="card-container">
+        <div class="card negative">
+          <button class="old">THE OLD WAY</button>
+          <h3>Manage everything yourself</h3>
+          <div class="card-img">
+            <img src="./images/trimly2.png" alt="" />
+          </div>
+
+          <ul>
+            <!-- <li>&#10060; Endless admin. Waste a bunch of time.</li> -->
+            <li>Endless admin. Waste a bunch of time.</li>
+            <li>
+              Struggle to find clients. Try random strategies and hope for the
+              best.
+            </li>
+            <li>
+              Expensive booking systems. Get charged a huge monthly fee + hidden
+              fees.
+            </li>
+            <li>
+              No insights. No analytics on revenue / clients / performance and
+              no way to set or measure goals.
+            </li>
+            <li>
+              No personal brand. Remain unknown with no reputation and never
+              reach your full potential.
+            </li>
+            <li>
+              Limited earnings. Struggle to raise prices because you’re not
+              fully booked and wasting time on admin.
+            </li>
+            <li>
+              No control. If you change shops, lose all your clients, data and
+              everything you’ve worked so hard for.
+            </li>
+          </ul>
+        </div>
+        <div class="card positive">
+          <button class="new">THE NEW WAY</button>
+          <h3>Trimly manages your schedule and growth</h3>
+          <div class="card-img">
+            <img src="./images/trimly3.png" alt="" />
+          </div>
+          <ul>
+            <li>
+              No more admin. Barbr takes care of your scheduling, bookings,
+              clients, analytics and payments.
+            </li>
+            <li>
+              Attract more clients. Get a personalised profile, run promotions
+              and let clients book in seconds.
+            </li>
+            <li>
+              Affordable. Just £20 / month and FREE if you're doing under 25
+              bookings
+            </li>
+            <li>
+              Simple analytics. See all your data, clients and performance so
+              you can measure progress and set goals.
+            </li>
+            <li>
+              Build your personal brand. Get your own profile link, reviews and
+              charge higher prices with a strong brand.
+            </li>
+            <li>
+              Become fully booked. Optimise your schedule, run smart promotions
+              and secure recurring bookings.
+            </li>
+            <li>
+              Raise prices. Once you’re fully booked, we’ll help you raise your
+              prices in the most profitable way..
+            </li>
+            <!-- <li>&#9989; Raise prices. Once you’re fully booked, we’ll help you raise your prices in the most profitable way..</li> -->
+          </ul>
+        </div>
+      </div>
+      <div class="cta">
+        <button>Try Barbr for free</button>
+        <p>30 days free trial. cancel anytime</p>
+      </div>
+    </section>
+
+    <div class="section-heading">
+      <h2>What's it going to be?</h2>
+    </div>
+
+    <!-- Hero Section 1 -->
+    <section class="hero-section">
+      <div class="content-container">
+        <div class="mockup-container">
+          <img
+            src="./images/trimly4.png"
+            alt="Booking App Screenshot"
+            class="mockup-image"
+          />
+        </div>
+        <div class="text-container">
+          <p class="sub-heading">SIMPLIFY BOOKINGS</p>
+          <h1>Get 2 hours back each day</h1>
+
+          <div class="feature-card">
+            <h3>Easy bookings</h3>
+            <p>
+              Share your profile link and let anyone see your info. Get booked
+              in seconds.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <h3>Clients managed for you</h3>
+            <p>
+              Messages, bookings, cancellations, re-scheduling, reminders,
+              reviews. We've got you.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <h3>SMS reminders</h3>
+            <p>
+              No more no-shows or late cancellations. Smooth business, smooth
+              sailing.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hero Section 2 (Reversed) -->
+    <section class="hero-section reverse">
+      <div class="content-container">
+        <div class="text-container">
+          <p class="sub-heading">SIMPLIFY BOOKINGS</p>
+          <h1>Get 2 hours back each day</h1>
+
+          <div class="feature-card">
+            <h3>Easy bookings</h3>
+            <p>
+              Share your profile link and let anyone see your info. Get booked
+              in seconds.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <h3>Clients managed for you</h3>
+            <p>
+              Messages, bookings, cancellations, re-scheduling, reminders,
+              reviews. We've got you.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <h3>SMS reminders</h3>
+            <p>
+              No more no-shows or late cancellations. Smooth business, smooth
+              sailing.
+            </p>
+          </div>
+        </div>
+        <div class="mockup-container mockup-container-reverse">
+          <img
+            src="./images/trimly4.png"
+            alt="Booking App Screenshot"
+            class="mockup-image"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Hero Section 3 -->
+    <section class="hero-section">
+      <div class="content-container">
+        <div class="mockup-container">
+          <img
+            src="./images/trimly5.png"
+            alt="Booking App Screenshot"
+            class="mockup-image"
+          />
+        </div>
+        <div class="text-container">
+          <p class="sub-heading">GROWTH TOOLS</p>
+          <h1>Fast track your growth</h1>
+
+          <div class="feature-card">
+            <h3>Run Promotions</h3>
+            <p>
+              New client discounts or flash sales help drive bookings when you
+              need it.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <h3>Get Reviews</h3>
+            <p>
+              Automatically get reviews from all clients. Build trust and
+              reputation.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <h3>Smarter Prices</h3>
+            <p>
+              Apply price changes at specific times in your schedule to maximise
+              demand.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero6">
+      <div class="text-container6">
+        <p class="sub-heading6">SHOP OWNERS</p>
+        <h1>Run a next-gen barbershop</h1>
+        <div class="easy-booking6">
+          <h3>Empower your staff</h3>
+          <p>
+            Empower your staff to act like entrepreneurs, be more independent
+            and make you more money.
+          </p>
+        </div>
+        <div class="feature-card6">
+          <h3>Track performance</h3>
+          <p>
+            Keep an eye on everything easily without spending unnecessary
+            energy.
+          </p>
+        </div>
+        <div class="feature-card6">
+          <h3>Own your clients</h3>
+          <p>
+            We never market to your clients or promote your competitors right
+            there on your profile (like some platforms)
+          </p>
+        </div>
+      </div>
+      <div class="mockup-div6">
+        <img src="./images/trimly5.png" alt="Booking App Screenshot" />
+      </div>
+      <div class="switch">
+        <h1>Switch in 5.</h1>
+        <h2>Get Booked in 10.</h2>
+        <p id="switchp1">Switching from another system?</p>
+        <p id="switchp2">
+          Get all your clients and bookings imported effortlessly...just ask.
+        </p>
+        <button id="switchbtn">Try trimly for free</button>
+        <p id="switchp3">30-day free trial. Cancel anytime</p>
+      </div>
+    </section>
+
+    <section class="her08">
+      <div class="container8">
+        <!-- Left Side: Images -->
+        <div class="left">
+          <img
+            src="https://cdn.prod.website-files.com/5ef76950188c031749a0e6dc/64a8bb276ec3f9c423366313_Group%20134.png"
+            alt="Phone 1"
+            class="phone phone-1"
+          />
+        </div>
+
+        <!-- Right Side: Text & Buttons -->
+        <div class="right">
+          <h3>BUILT FOR BARBERS</h3>
+          <h1>
+            Everything you need to <br />
+            succeed as a barber
+          </h1>
+          <div class="buttons">
+            <!--<a href="#"><img src="https://cdn.prod.website-files.com/5ef76950188c031749a0e6dc/64a7456a54ea30a53af38a0e_app%20icon%201%20(1).png" loading="lazy" alt="" class="image-61 display-hidden bar" ></a>-->
+            <a href="#" class="app-store">
+              <img
+                src="https://cdn.prod.website-files.com/5ef76950188c031749a0e6dc/64ab4fdb2c164cc22c4f8418_Group%20(2).svg"
+                alt="App Store"
+              />
+            </a>
+            <a href="#" class="google-play">
+              <img
+                src="https://cdn.prod.website-files.com/5ef76950188c031749a0e6dc/64ab4f39a446d8dc4427903b_Group%20135.svg"
+                alt="Google Play"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero7">
+      <div class="mockup-div7">
+        <div class="faq">
+          <h3>FAQS</h3>
+          <h1>Got Questions?</h1>
+        </div>
+        <img src="./images/trimly7.svg" alt="Booking App Screenshot" />
+      </div>
+      <div class="text-container7">
+        <p class="sub-heading5">GROWTH TOOLS</p>
+        <h1>Fast track your growth</h1>
+
+        <div class="easy-booking7">
+          <h3>Run Promotions</h3>
+          <p>
+            New client discounts or flash sales help drive bookings when you
+            need it.
+          </p>
+        </div>
+
+        <div class="feature-card7">
+          <h3>Get Reviews</h3>
+          <p>
+            Automatically get reviews from all clients. Build trust and
+            reputation.
+          </p>
+        </div>
+
+        <div class="feature-card7">
+          <h3>Smarter Prices</h3>
+          <p>
+            Apply price changes at specific times in your schedule to maximise
+            demand.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div class="container9">
+      <section class="hero9">
+        <h3>WHY TRIMLY?</h3>
+        <h1>Powering the next generation of barbers</h1>
+        <p>
+          Trimly is dedicated to helping independent barbers grow to their full
+          potential.
+        </p>
+        <p>Let us handle the boring stuff while you focus on what you love.</p>
+      </section>
+
+      <section class="savings">
+        <div class="savings-box">
+          <p>During an 8-hour workday, TRIMLY saves 👉</p>
+          <ul id="savings-list">
+            <li>→ <strong>2 hours a day</strong></li>
+            <li>→ <strong>14 hours a week</strong></li>
+            <li>→ <strong>56 hours a month</strong></li>
+            <li>→ <span class="highlight">728 hours a year</span></li>
+          </ul>
+          <img src="./images/clock-png.svg" class="clock" alt="" />
+          <!-- <div class="clock">
+                   
+                </div> -->
+        </div>
+      </section>
+
+      <section class="features9">
+        <div class="feature9">
+          <span>✔</span>
+          <h2>Get more done</h2>
+          <p>
+            Your time is too valuable to be spent on admin. We handle that for
+            you so you can focus on what’s important.
+          </p>
+        </div>
+        <div class="feature9">
+          <span>✔</span>
+          <h2>Maximise your output</h2>
+          <p>
+            We take care of your bookings, reviews, and communications so you
+            can focus on what actually makes you money—barbering!
+          </p>
+        </div>
+        <div class="feature9">
+          <span>✔</span>
+          <h2>Work less, earn more</h2>
+          <p>
+            How is that possible? By increasing demand, prices, and running an
+            efficient business. We’ve done it for 250+ barbers, who’s next?
+          </p>
+        </div>
+      </section>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-text">
+        <div class="logo">Trimly</div>
+        <p>Empowering barbers to thrive <span>🌍</span></p>
+        <p><i class="fa-brands fa-square-instagram"></i></p>
+      </div>
+      <div class="container-column">
+        <div class="column-text">
+          <div class="column-title">Resources</div>
+          <a href="#">About us</a>
+          <a href="#">FAQS</a>
+          <a href="#">Privacy policy</a>
+          <a href="#">Terms of service</a>
+        </div>
+        <div class="column-text">
+          <div class="column-title">Help</div>
+          <a href="#">Chat (recommended)</a>
+          <a href="#">Email us</a>
+        </div>
+      </div>
+    </footer>
+    <div class="copyright">&copy; 2022 Barbr Ltd. All Rights Reserved.</div>
+  </body>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const menuBtn = document.querySelector(".mobile-menu-btn");
+      const hamburger = document.querySelector(".hamburger");
+      const mobileNav = document.querySelector(".mobile-nav");
+      const overlay = document.querySelector(".overlay");
+      const navLinks = document.querySelectorAll(".mobile-nav a");
+
+      // Toggle menu function
+      function toggleMenu() {
+        hamburger.classList.toggle("active");
+        mobileNav.classList.toggle("active");
+        overlay.classList.toggle("active");
+        document.body.style.overflow = mobileNav.classList.contains("active")
+          ? "hidden"
+          : "";
+      }
+
+      // Close menu function
+      function closeMenu() {
+        hamburger.classList.remove("active");
+        mobileNav.classList.remove("active");
+        overlay.classList.remove("active");
+        document.body.style.overflow = "";
+      }
+
+      // Event listeners
+      menuBtn.addEventListener("click", toggleMenu);
+      overlay.addEventListener("click", closeMenu);
+
+      navLinks.forEach((link) => {
+        link.addEventListener("click", closeMenu);
+      });
+    });
+  </script>
 </html>

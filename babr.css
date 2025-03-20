@@ -198,9 +198,16 @@ div>.num>h1 {
 
 
 
-
-
-
+.carousel-container {
+    /* width: 100%; */
+    max-width: 600px;
+    display: flex;
+    flex-direction: row-reverse;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    border: 2px solid red;
+}
 
 
 
