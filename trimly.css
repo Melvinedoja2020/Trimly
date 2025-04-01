@@ -23,11 +23,12 @@ body {
   font-family: "Montserrat", sans-serif;
   color: #fff;
   background: #000;
+  overflow-x: hidden;
 }
 
 /* Utility Classes */
 .highlight {
-  background: linear-gradient(to bottom, #00ff95, #00d4ff);
+  background: linear-gradient(to bottom, #16ca4c, #05b413);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: bold;
@@ -49,11 +50,12 @@ header {
 
 .navbar {
   display: flex;
-  width: 1080px;
+  width: 100%;
+  max-width: 1080px;
   margin: auto;
   justify-content: space-between;
   align-items: center;
-  padding: 0 5px;
+  padding: 0 15px;
 }
 
 .logo img {
@@ -61,6 +63,7 @@ header {
   margin: 1px auto;
 }
 
+/* Desktop Navigation */
 .nav-links {
   list-style: none;
   display: flex;
@@ -85,7 +88,7 @@ header {
 }
 
 .nav-links .btn {
-  background: linear-gradient(to bottom, #00ff95, #00d4ff);
+  background: linear-gradient(to bottom, #16ca4c, #05b413);
   padding: 10px 20px;
   border-radius: 5px;
   color: #222;
@@ -94,21 +97,18 @@ header {
 
 /* Mobile menu container */
 .mobile-menu {
-  position: relative;
-  padding: 1rem;
   display: none;
-  justify-content: space-between;
-  align-items: center;
   width: 100%;
-  z-index: 97;
+  position: absolute;
+  right: 0;
+  padding: 45px;
 }
 
 /* Hamburger button */
 .mobile-menu-btn {
   cursor: pointer;
   z-index: 100;
-  position: absolute;
-  right: 0;
+  position: relative;
 }
 
 .hamburger {
@@ -126,7 +126,7 @@ header {
   display: block;
   height: 3px;
   width: 100%;
-  background-color: #333;
+  background-color: #fff;
   border-radius: 3px;
   transition: all 0.3s ease;
 }
@@ -144,29 +144,21 @@ header {
   transform: translateY(-8.5px) rotate(-45deg);
 }
 
-/* Navigation links */
-.nav-links {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
+/* Mobile Navigation */
 .mobile-nav {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: -100%;
   width: 70%;
-  height: 50vh;
-  padding: 6rem 2rem 2rem;
+  height: 100vh;
+  padding: 80px 20px 20px;
   transition: right 0.3s ease;
-  background: rgba(255, 255, 255, 0.25);
+  background: rgba(34, 34, 34, 0.95);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
   box-shadow: 0 2px 5px 0 rgba(85, 236, 98, 0.37);
   overflow-y: auto;
-  display: none;
+  z-index: 99;
 }
 
 .mobile-nav.active {
@@ -174,7 +166,8 @@ header {
 }
 
 .mobile-nav li {
-  margin-bottom: 1.5rem;
+  margin-bottom: 30px;
+  list-style: none;
 }
 
 .mobile-nav a {
@@ -182,33 +175,33 @@ header {
   text-decoration: none;
   font-size: 1.1rem;
   font-weight: 600;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
   display: block;
-  z-index: 1000;
 }
 
 .mobile-nav a:hover {
-  color: #00ff95;
+  color: #00ff62;
   transform: translateX(5px);
 }
 
 .mobile-nav a.btn {
-  background: linear-gradient(to right, #00d4ff, #00ff99);
+  background: linear-gradient(to right, #16ca4c, #05b413);
   color: #1a1a1a;
-  padding: 10px 20px;
+  padding: 10px 10px;
   border-radius: 8px;
   text-align: center;
   font-weight: 700;
-  margin-top: 10px;
   transform: none;
+  margin-top: 3rem;
+  font-size: 16px;
 }
 
 .mobile-nav a.btn:hover {
   transform: translateY(-5px);
-  box-shadow: 0 5px 10px rgba(0, 255, 153, 0.3);
+  box-shadow: 0 5px 10px rgba(31, 224, 5, 0.3);
 }
 
-/* Overlay */
+/* Overlay 
 .overlay {
   position: fixed;
   top: 0;
@@ -219,37 +212,40 @@ header {
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease, visibility 0.3s ease;
-  z-index: -50;
-}
+  z-index: 98;
+  display: none;
+}*/
 
 .overlay.active {
   opacity: 1;
   visibility: visible;
 }
 
-/*Responsivenessfix */
+/* Media Queries for Responsiveness */
 @media (max-width: 768px) {
-.mobile-menu {
-    display: flex;
+  .nav-links {
+    display: none;
   }
-
-  .mobile-nav {
-    width: 80%;
+  
+  .mobile-menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: auto;
+  }
+  
+  .navbar {
+    padding: 0 15px;
   }
 }
 
 @media (max-width: 480px) {
-  .mobile-menu {
-    padding: 0.8rem;
-  }
-
   .mobile-nav {
     width: 85%;
-    padding: 5rem 1.5rem 1.5rem;
   }
-
-  .mobile-nav a {
-    font-size: 1rem;
+  
+  .logo img {
+    width: 120px;
   }
 }
 
@@ -270,7 +266,7 @@ header {
 }
 
 .hero-content .subheading {
-  background: linear-gradient(to bottom, #00ff95, #00d4ff);
+  background: linear-gradient(to bottom, #16ca4c, #05b413);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
@@ -300,7 +296,7 @@ header {
 
 .cta-button {
   display: inline-block;
-  background: linear-gradient(to bottom, #00ff95, #00d4ff);
+  background: linear-gradient(to bottom, #16ca4c, #05b413);
   color: #0d0d0d;
   font-size: 18px;
   font-weight: bold;
@@ -328,7 +324,7 @@ header {
   position: absolute;
   width: 300px;
   height: 300px;
-  background: linear-gradient(to bottom, #00ff95, #00d4ff);
+  background: linear-gradient(to bottom, #16ca4c, #05b413);
   border-radius: 50%;
   z-index: -1;
 }
@@ -351,7 +347,7 @@ header {
   align-items: center;
   margin: 0 auto;
   padding: 20px;
-  border: 2px solid #00ff95;
+  border: 2px solid #04c70e;
   border-radius: 10px;
 }
 
@@ -382,7 +378,7 @@ header {
 .stats-line {
   width: 25px;
   height: 1px;
-  background-color: #3cac7d;
+  background-color: #04c70e;
   margin: 8px auto;
 }
 
@@ -392,7 +388,7 @@ header {
 
 .number-box h3 {
   font-size: 28px;
-  color: #00ff95;
+  color: #04c70e;
   font-weight: bold;
 }
 
@@ -502,7 +498,7 @@ header {
 .heading2 {
   font-size: 40px;
   margin: 0 auto 80px;
-  color: #00ff95;
+  color: #04c70e;
   text-align: center;
   font-weight: 700;
   max-width: 800px;
@@ -573,7 +569,7 @@ header {
 
 .new,
 .old {
-  background: linear-gradient(to right, #00ff95, #00d4ff);
+  background: linear-gradient(to right,  #16ca4c, #05b413);
   border-radius: 30px;
   padding: 10px 20px;
   font-size: 14px;
@@ -599,7 +595,7 @@ header {
 }
 
 .positive {
-  border: 1px solid #00ff95;
+  border: 1px solid #04c70e;
 }
 
 /* List styles with fixed starting position */
@@ -627,7 +623,7 @@ header {
 
 .card.positive ul li::before {
   content: "✓";
-  color: #00ff95;
+  color: #04c70e;
   position: absolute;
   left: 0;
   font-size: 18px;
@@ -644,7 +640,7 @@ header {
 }
 
 .cta button {
-  background: linear-gradient(to right, #00ff95, #00d4ff);
+  background: linear-gradient(to right,  #16ca4c, #05b413);
   color: #000;
   border: none;
   padding: 18px 40px;
@@ -675,7 +671,7 @@ header {
 
 .section-heading h2 {
   font-size: 28px;
-  color: #00ff99;
+  color: #04c70e;
   position: relative;
   padding-bottom: 10px;
 }
@@ -688,7 +684,7 @@ header {
   transform: translateX(-50%);
   width: 50px;
   height: 3px;
-  background-color: #00ff99;
+  background-color: #04c70e;
   transition: width 0.3s ease;
 }
 
@@ -745,12 +741,13 @@ header {
   flex: 1;
   max-width: 500px;
   width: 100%;
-}
+}git remote -v
+
 
 .sub-heading {
   font-size: 14px;
   font-weight: bold;
-  color: #00ff99;
+  color: #04c70e;
   text-transform: uppercase;
   margin-bottom: 10px;
   letter-spacing: 1px;
@@ -768,7 +765,7 @@ header {
   padding: 20px;
   border-radius: 10px;
   margin-bottom: 20px;
-  border-left: 3px solid #00ff99;
+  border-left: 3px solid #04c70e;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   width: 100%;
 }
@@ -779,7 +776,7 @@ header {
 }
 
 .feature-card h3 {
-  color: #00ff99;
+  color: #04c70e;
   margin-bottom: 10px;
 }
 
@@ -830,7 +827,7 @@ header {
   font-size: 14px;
   font-weight: 600;
   letter-spacing: 2px;
-  color: #00ff95;
+  color: #04c70e;
   margin-bottom: 10px;
   text-transform: uppercase;
 }
@@ -868,7 +865,7 @@ header {
   background: rgba(255, 255, 255, 0.1);
   padding: 20px;
   border-radius: 10px;
-  border-left: 3px solid #00ff95;
+  border-left: 3px solid #04c70e;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   width: 100%;
 }
@@ -878,7 +875,7 @@ header {
   background: rgba(255, 255, 255, 0.1);
   padding: 20px;
   border-radius: 10px;
-  border-left: 3px solid #00ff95;
+  border-left: 3px solid #04c70e;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   width: 100%;
 }
@@ -893,7 +890,7 @@ header {
 .feature-card6 h3 {
   font-size: 20px;
   margin-bottom: 8px;
-  color: #00ff95;
+  color: #04c70e;
 }
 
 .easy-booking6 p,
@@ -915,7 +912,7 @@ header {
 }
 
 .switch #switchbtn {
-  background: linear-gradient(to bottom, #00ff95, #00d4ff);
+  background: linear-gradient(to bottom,  #16ca4c, #05b413);
   padding: 10px 20px;
   border-radius: 5px;
   font-family: "Montserrat", sans-serif;
@@ -953,7 +950,7 @@ header {
 .switch > h1 {
   font-size: 30px;
   font-weight: bold;
-  background: linear-gradient(to bottom, #00ff95, rgb(78, 174, 142));
+  background: linear-gradient(to bottom, #04c70e, rgb(7, 206, 0));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 5px;
@@ -967,7 +964,7 @@ header {
 .switch > h2 {
   font-size: 40px;
   font-weight: bold;
-  background: linear-gradient(to bottom, #00ff95, #000);
+  background: linear-gradient(to bottom, #04c70e, #000);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 15px;
@@ -1071,7 +1068,7 @@ header {
   font-size: 14px;
   font-weight: 600;
   letter-spacing: 2px;
-  color: #00ff95;
+  color: #04c70e;
   margin-bottom: 10px;
   text-transform: uppercase;
 }
@@ -1080,7 +1077,7 @@ header {
   font-size: 32px;
   font-weight: 700;
   margin-bottom: 20px;
-  background: linear-gradient(to right, #00d4ff, #00ff99);
+  background: linear-gradient(to right,  #16ca4c, #05b413);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -1096,7 +1093,7 @@ header {
   font-size: 14px;
   font-weight: 600;
   letter-spacing: 2px;
-  color: #00ff95;
+  color: #04c70e;
   margin-bottom: 10px;
   text-transform: uppercase;
 }
@@ -1106,7 +1103,7 @@ header {
   font-weight: 700;
   margin-bottom: 30px;
   line-height: 1.2;
-  background: linear-gradient(to right, #ffffff, #00ff99);
+  background: linear-gradient(to right, #ffffff, #04c70e);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -1117,7 +1114,7 @@ header {
   background: rgba(255, 255, 255, 0.1);
   padding: 20px;
   border-radius: 10px;
-  border-left: 3px solid #00ff95;
+  border-left: 3px solid #04c70e;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   width: 100%;
 }
@@ -1127,7 +1124,7 @@ header {
   background: rgba(255, 255, 255, 0.1);
   padding: 20px;
   border-radius: 10px;
-  border-left: 3px solid #00ff95;
+  border-left: 3px solid #04c70e;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   width: 100%;
 }
@@ -1142,7 +1139,7 @@ header {
 .feature-card7 h3 {
   font-size: 20px;
   margin-bottom: 8px;
-  color: #00ff95;
+  color: #04c70e;
   font-weight: 600;
 }
 
@@ -1265,7 +1262,7 @@ header {
 .faq h2 {
   font-size: 32px;
   margin-bottom: 30px;
-  background: linear-gradient(to right, #00d4ff, #00ff99);
+  background: linear-gradient(to right,  #16ca4c, #05b413);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -1285,7 +1282,7 @@ header {
 }
 
 .hero9 > h3 {
-  background: linear-gradient(to left, #00d4ff, #00ffcc);
+  background: linear-gradient(to left, #16ca4c, #05b413);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 20px;
@@ -1297,7 +1294,7 @@ header {
 .hero9 h1 {
   font-size: 36px;
   font-weight: bold;
-  background: linear-gradient(to right, #00d4ff, #00ff99, #ffffff);
+  background: linear-gradient(to right,  #16ca4c, #05b413, #ffffff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 20px;
@@ -1341,7 +1338,7 @@ header {
   font-size: 18px;
   margin: 20px 15px;
   font-weight: 600;
-  color: #00ff99;
+  color: #04c70e;
 }
 
 .savings-box ul {
@@ -1371,7 +1368,7 @@ header {
   border-radius: 12px;
   width: 30%;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border-left: 3px solid #00ff99;
+  border-left: 3px solid #04c70e;
 }
 
 .feature9:hover {
@@ -1382,7 +1379,7 @@ header {
 .feature9 h2 {
   font-size: 20px;
   margin-bottom: 15px;
-  color: #00ff99;
+  color: #04c70e;
 }
 
 .feature9 p {
@@ -1428,7 +1425,7 @@ header {
 }
 
 .footer a:hover {
-  color: #00ff99;
+  color: #04c70e;
   transform: translateX(5px);
 }
 
@@ -1442,7 +1439,7 @@ header {
 .footer-text .logo {
   font-size: 28px;
   font-weight: 800;
-  background: linear-gradient(to right, #00d4ff, #00ff99);
+  background: linear-gradient(to right,  #16ca4c, #05b413);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 20px;
